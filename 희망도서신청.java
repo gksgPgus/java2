@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-/*
+/**
  * 희망도서신청하는 프로그램
  * 2024-12-17: 최초생성
  */
@@ -27,6 +27,7 @@ public class 희망도서신청 {
             System.out.println("1. 희망 도서 신청");
             System.out.println("2. 신청 내역 조회");
             System.out.println("3. 파일에 데이터 저장");
+            System.out.println("4. 파일 불러오기");
             System.out.print("선택: ");
             int a = sc.nextInt();
             sc.nextLine();
@@ -40,13 +41,15 @@ public class 희망도서신청 {
                     break;
                 case 3:
                     파일에저장();
+                    break;
+                case 4:
                     파일에서불러오기();
                     break;
             }
         }
     }
 
-    /*
+    /**
      * 학생 이름과 도서이름을 입력받고 List와Map에 저장하기
      */
     private static void 도서신청(Scanner sc) {
@@ -68,7 +71,7 @@ public class 희망도서신청 {
             System.out.println(user + ": " + map.get(user));
         }
     }
-    /*
+    /**
      * 파일에 데이터를 저장하기
      */
     private static void 파일에저장() {
@@ -83,7 +86,7 @@ public class 희망도서신청 {
         }
     }
 
-    /*
+    /**
      * 파일에 저장된 내역을 불러와서 출력
      */
     private static void 파일에서불러오기() {
